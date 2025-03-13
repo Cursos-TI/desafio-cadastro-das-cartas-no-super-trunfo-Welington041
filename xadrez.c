@@ -46,7 +46,7 @@ int main(){  // Carta 1 e 2
 
     printf("População: %ld\n", populacao);
 
-    printf("Pontos turísticos: %d\n", pontosturisticos);
+    printf("Pontos Túristicos: %d\n", pontosturisticos);
 
     densidadepopulacional = (float) (populacao / area);
     
@@ -75,7 +75,7 @@ int main(){  // Carta 1 e 2
 
     printf("População: %ld\n", populacao2);
 
-    printf("Pontos túristicos: %d\n", pontosturisticos2);
+    printf("Pontos Túristicos: %d\n", pontosturisticos2);
 
     densidadepopulacional2 = (float) (populacao2 / area2);
     
@@ -89,26 +89,92 @@ int main(){  // Carta 1 e 2
 
     printf("\n");
 
-    
-    printf("Comparação de Cartas\n");
+    //Início da comparação
+    printf("Comparação de Cartas:\n");
 
-    printf("Área em km²: %d\n", area > area2);
+    printf("\n");
 
-    printf("PIB: %d\n", pib > pib2);
+    //Comparação entre áreas
+    if (area > area2) {
 
-    printf("População: %d\n", populacao > populacao2);
+      printf("Carta 1 venceu!\n");
+    }else {
+      printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - Área em km² (cwb): %.2f km²\n", area);
+    printf("Carta 2 - Área em km² (floripa): %.2f km²\n", area2);
+  
+    printf("\n");
 
-    printf("Pontos túristicos: %d\n", pontosturisticos > pontosturisticos2);
+    //Comparação entre PIBS
+    if (pib > pib2) {
 
-    densidadepopulacional2 = (float) (populacao2 / area2);
-    
-    printf("Densidade Populacional: %d\n", densidadepopulacional < densidadepopulacional2);
+    printf("Carta 1 venceu!\n");
+    }else {
+    printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - PIB (cwb): %.3f bilhões\n", pib);
+    printf("Carta 2 - PIB (floripa): %.3f bilhões\n", pib2);
 
-    pibpercapita2 = (float) (populacao2 / pib2);
-    
-    printf("PIB per Capita: %d\n", pibpercapita > pibpercapita2);
+    printf("\n");
 
-    printf("Super Poder: %d\n", superpoder > superpoder2);
+    //Comparação entre populações
+    if (populacao > populacao2) {
+
+    printf("Carta 1 venceu!\n");
+    }else {
+    printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - População (cwb): %ld\n", populacao);
+    printf("Carta 2 - População (floripa): %ld\n", populacao2);
+
+    printf("\n");
+
+    //Comparação entre pontos túristicos
+    if (pontosturisticos > pontosturisticos2) {
+
+    printf("Carta 1 venceu!\n");
+    }else {
+    printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - Pontos Túristicos (cwb): %d\n", pontosturisticos);
+    printf("Carta 2 - Pontos Túristicos (floripa): %d\n", pontosturisticos2);
+
+    printf("\n");
+
+    //Comparação entre densidade populacioanl
+    if (densidadepopulacional < densidadepopulacional2) {
+
+      printf("Carta 1 venceu!\n");
+    }else {
+      printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - Densidade Populacional (cwb): %.2f hab/km²\n", densidadepopulacional);
+    printf("Carta 2 - Densidade Populacional (floripa): %.2f hab/km²\n", densidadepopulacional2);
+
+    printf("\n");
+
+    //Comparação entre PIB per capita
+    if (pibpercapita > pibpercapita2) {
+
+      printf("Carta 1 venceu!\n");
+    }else {
+      printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - PIB per Capita (cwb): %.2f reais\n", pibpercapita);
+    printf("Carta 2 - PIB per Capita (floripa): %.2f reais\n", pibpercapita2);
+
+    printf("\n");
+
+    //Comparação entre super poderes
+    if (superpoder > superpoder2) {
+
+      printf("Carta 1 venceu!\n");
+    }else {
+      printf("Carta 2 venceu!\n");
+    }
+    printf("Carta 1 - Super Poder (cwb): %.3f\n", populacao + area + pib + pontosturisticos + pibpercapita / densidadepopulacional);
+    printf("Carta 2 - Super Poder (floripa): %.3f\n", populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 / densidadepopulacional2);
 
 
  return 0;
